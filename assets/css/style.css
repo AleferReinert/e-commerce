@@ -84,7 +84,13 @@
 }
 body,
 p,
-ul {
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 ul {
@@ -4986,9 +4992,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 23px;
   height: 26px;
 }
+html {
+  font-size: 16px;
+}
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   color: rgba(0, 0, 0, 0.85);
 }
 .container {
@@ -5252,8 +5260,10 @@ body {
 }
 #footer .bar-middle .site-map {
   display: flex;
-  flex: 7;
   font-size: 0.813rem;
+}
+#footer .bar-middle .site-map .list {
+  max-width: max-content;
 }
 #footer .bar-middle .site-map .list + .list {
   margin-left: 50px;
@@ -5282,8 +5292,10 @@ main {
 .owl-carousel .owl-dots {
   text-align: center;
   font-size: 0;
-  margin-top: -20px;
-  position: relative;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
 }
 .owl-carousel button.owl-dot {
   width: 12px;
@@ -5301,4 +5313,54 @@ main {
 }
 .dropdown-target {
   display: none;
+}
+.list-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.list-products .product .image {
+  max-width: 100%;
+}
+.list-products .product .name {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 8px 0 5px;
+}
+.list-products .product .price-original {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.45);
+}
+.list-products .product .price-original span {
+  text-decoration: line-through;
+}
+.list-products .product .price-final {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.85);
+}
+.list-products .product .price-final span {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.title-section {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 900;
+  position: relative;
+}
+.title-section::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #dedede;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
 }

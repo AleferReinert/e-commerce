@@ -1,0 +1,20 @@
+// Grids
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    @media all and (min-width: 768px) {
+        max-width: if((@container-fluid = true), none, 720px);
+    }
+    
+    @media all and (min-width: 992px) {
+        max-width: if((@container-fluid = true), none, 960px);
+    }
+    
+    @media all and (min-width: 1200px) {
+        max-width: if((@container-fluid = true), none, 1140px);
+    }
+}

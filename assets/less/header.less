@@ -1,0 +1,291 @@
+// Header
+
+#header {
+    @barTopHeight: 35px;
+
+    background: #fff; 
+
+    .bar-top {
+
+        background: rgba(0,0,0,0.025);
+        font-size: @font-14px;
+        
+        .container {
+            display: flex;
+        }
+
+        p {
+            flex: 1;
+            line-height: @barTopHeight;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+
+            > ul > li {
+                position: relative;
+                display: inline-block;
+
+                + li {
+                    margin-left: 20px;
+                }
+
+                > a {
+                    line-height: @barTopHeight;
+                    display: inline-block;
+    
+                    .fa {
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdown-account {
+        background: #fff;
+        position: absolute;
+        right: 0;
+        top: @barTopHeight;
+        border: 1px solid @border-color;
+        text-align: left;
+        z-index: 2;
+        width: max-content;
+        font-size: @font-13px;
+        letter-spacing: 0.5px;
+        color: rgba(0,0,0,0.65);
+
+        li + li {
+            border-top: 1px solid fade(@border-color, 50%);
+        }
+
+        a {
+            display: block;
+            padding: 12px 15px;
+            transition: all 0.15s linear;
+
+            .fa {
+                width: 17px;
+                text-align: center;
+                margin-right: 3px;
+                transition: all 0.15s linear;
+            }
+            
+            &:hover {
+                color: #000;
+            }
+        }
+
+        // Seta
+        @arrow-width: 5px;
+        @arrow-height: 5px;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            border-width: @arrow-height @arrow-width;
+            border-style: solid;
+            border-color: transparent transparent #fff;
+            position: absolute;
+            top: -(@arrow-height * 2);
+            right: 10px;
+        }
+
+        &::before {
+            border-width: (@arrow-height + 1) (@arrow-width + 1);
+            top: -((@arrow-height * 2) + 2);
+            right: 9px;
+            border-color: transparent transparent @border-color;
+        }
+    }
+
+    .bar-middle {
+
+        .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .logo {
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            padding: 30px 0;
+            color: #000;
+            flex: 1;
+        }
+
+        .cart, 
+        .favorites {
+            position: absolute;
+            align-self: center;
+        }
+
+        .favorites {
+            margin-right: 55px;
+        }
+
+        .quantity {
+            @size: 20px;
+
+            background: #000;
+            border-radius: 100%;
+            text-align: center;
+            color: #fff;
+            width: @size;
+            height: @size;
+            position: absolute;
+            top: -6px;
+            right: -10px;
+            font: 700 @font-9px/@size @font-primary;
+        }
+
+        .svg-heart, 
+        .svg-shopping-bag {
+            @size: 30px;
+            
+            width: @size;
+            height: @size;
+
+            path {
+                color: inherit;
+            }
+        }
+    }
+
+    .bar-bottom {
+        background: @color-primary;
+        position: relative;
+
+        > .container {
+            display: flex;
+        }
+    }
+
+    .menu {
+        flex: 5;
+        
+        > ul {
+            font-size: 0;
+            margin-left: -15px;
+
+            > li {
+                display: inline-block;
+    
+                > a:hover,
+                &.active > a {
+                    background: #fff;
+                    color: @color-primary;
+                }
+    
+                > a {
+                    color: #fff;
+                    font-size: @font-12px;
+                    line-height: @font-17px;
+                    padding: 15px 15px;
+                    display: inline-block;
+                    transition: all @transition-duration linear;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px; 
+                }
+            }
+        }
+    }
+
+    .submenu-primary {
+        background: #fff;
+        position: absolute;
+        top: 47px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        box-sizing: border-box;
+        display: none;
+
+        a {
+            color: rgba(0,0,0,0.75);
+            transition: all 0.1s linear;
+            display: block;
+        }
+
+        > ul {
+            padding: 10px 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            > li {
+                width: 100%;
+                max-width: 12.5%;
+
+                > a {
+                    font-size: @font-12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin: 10px 0;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    .submenu-secondary {
+        transition: all @transition-duration linear;
+
+        a {
+            font-size: @font-14px;
+            padding: 2px 0;
+
+            &:hover {
+                transform: translateX(2px);
+            }
+        }
+    }
+
+    .search {
+        position: relative;
+        flex: 1;
+        margin-right: -6px;
+
+        form {
+            font-size: 0;
+        }
+
+        input {
+            border: 0;
+            background: transparent;
+            color: #fff;
+            font-size: @font-14px;
+            padding: 15px 26px 15px 0;
+            letter-spacing: 0.25px;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+
+        .btn-submit {
+            background: transparent;
+            border: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            .svg-search {
+                @size: 20px;
+
+                width: @size;
+                height: @size;
+
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}

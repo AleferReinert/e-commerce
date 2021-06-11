@@ -3,13 +3,6 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-	bake: {
-        your_target: {
-            files: {
-                'index.html': 'assets/html/index.html'
-            }
-        },
-    },
 	less: {
 		development: {
 			files: {
@@ -21,15 +14,18 @@ module.exports = function(grunt) {
 		target : {
 			files : [ { 
 				expand:	true,
-				src:	['assets/css/style.css'],
-				ext:	'.min.css'
+				cwd: 	'assets/css',
+				src:	['*css'],
+				dest: 	'assets/css/min',
+				ext: 	'.min.css'
 			} ] 
 		}
 	},
 	uglify: {
 		my_target: {
 			files: {
-				'assets/js/scripts.min.js': ['assets/js/jquery-3.6.0.min.js']
+				'assets/js/min/scripts.min.js': ['assets/js/jquery-3.6.0.min.js','assets/js/scripts.js'],
+				'assets/js/min/scripts-home.min.js': ['assets/js/owl.carousel.min.js','assets/js/home.js']
 			}
 		}
 	},
@@ -56,12 +52,8 @@ module.exports = function(grunt) {
 		options: {
 			livereload: true
 		},
-		html: {
-			files: ['assets/html/*.html'],
-			tasks: ['bake']
-		},
 		js: {
-			files: ['**/*.js'],
+			files: ['**/*.js','!**/*.min.js'],
 			tasks: ['uglify']
 		},
 		less: {
@@ -76,7 +68,6 @@ module.exports = function(grunt) {
   });
 
   // Plugis
-  grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -84,5 +75,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-connect');
   // Default tasks
-  grunt.registerTask('default', ['sprite','bake','less','cssmin','uglify']);
+  grunt.registerTask('default', ['sprite','less','cssmin','uglify']);
 };

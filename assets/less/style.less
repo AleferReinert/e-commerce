@@ -11,13 +11,6 @@
 @import 'header.less';
 @import 'footer.less';
 
-body {
-    //background: rgba(0,0,0,0.015);
-}
-
-main {
-    min-height: 600px;
-}
 
 // Owl Carousel
 .owl-carousel {
@@ -52,7 +45,6 @@ main {
 }
 
 // Dropdown
-
 .dropdown-target {
     display: none; 
 }
@@ -67,6 +59,8 @@ main {
     text-align: center;
 
     .product {
+        display: block;
+        position: relative;
 
         .image {
             max-width: 100%;
@@ -97,6 +91,50 @@ main {
                 font-size: @font-14px;
             }
         }
+
+        .discount {
+            position: absolute;
+            right: 0;
+            bottom: 87px;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 6px 8px;
+            background: rgba(0, 0, 0, 0.15);
+            font-weight: 300;
+            font-size: @font-16px;
+        }
+
+        .btn-favorites {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            padding: 10px;
+            opacity: 0;
+            transition: all @transition-duration linear;
+            color: #fff;
+            font-size: 18px;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        &:hover {
+
+            .btn-favorites {
+                opacity: 1;
+            }
+        }
+
+        .btn-remove-favorites {
+            color: red;
+            opacity: 1;
+            transform: scale(0.75);
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
     }
 }
 
@@ -109,7 +147,7 @@ main {
     font-weight: 900;
     position: relative;
 
-    // Linha superior e inferior
+    // Linha inferior
     &::after {
         content: '';
         display: block;
@@ -120,4 +158,9 @@ main {
         left: 0;
         bottom: -5px;
     }
+}
+
+// Icons (sprite)
+.icon {
+    display: block;
 }

@@ -82,6 +82,9 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
 }
+*:focus {
+  cursor: none;
+}
 body,
 p,
 ul,
@@ -117,6 +120,12 @@ input:focus {
 }
 button {
   cursor: pointer;
+}
+button {
+  border: 0;
+}
+button {
+  background: transparent;
 }
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
@@ -4950,47 +4959,53 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-angle-left-solid {
-  background-image: url(../img/icons.png);
-  background-position: -66px -21px;
-  width: 10px;
-  height: 18px;
-}
-.icon-angle-right-solid {
-  background-image: url(../img/icons.png);
-  background-position: -76px -21px;
-  width: 10px;
-  height: 18px;
-}
-.icon-close-btn {
-  background-image: url(../img/icons.png);
+.icon-amex {
+  background-image: url(../../img/sprite.png);
   background-position: 0px 0px;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 35px;
 }
-.icon-icon-hamburguer {
-  background-image: url(../img/icons.png);
-  background-position: -36px 0px;
-  width: 30px;
-  height: 24px;
+.icon-boleto {
+  background-image: url(../../img/sprite.png);
+  background-position: -44px 0px;
+  width: 44px;
+  height: 35px;
 }
-.icon-paper-plane {
-  background-image: url(../img/icons.png);
-  background-position: -66px 0px;
-  width: 28px;
-  height: 21px;
+.icon-diners {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px -35px;
+  width: 44px;
+  height: 35px;
 }
-.icon-search-solid {
-  background-image: url(../img/icons.png);
-  background-position: 0px -36px;
-  width: 26px;
-  height: 26px;
+.icon-elo {
+  background-image: url(../../img/sprite.png);
+  background-position: -44px -35px;
+  width: 44px;
+  height: 35px;
 }
-.icon-shopping-bag-solid {
-  background-image: url(../img/icons.png);
-  background-position: -26px -36px;
-  width: 23px;
-  height: 26px;
+.icon-hipercard {
+  background-image: url(../../img/sprite.png);
+  background-position: -88px 0px;
+  width: 44px;
+  height: 35px;
+}
+.icon-mastercard {
+  background-image: url(../../img/sprite.png);
+  background-position: -88px -35px;
+  width: 44px;
+  height: 35px;
+}
+.icon-pix {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px -70px;
+  width: 44px;
+  height: 35px;
+}
+.icon-visa {
+  background-image: url(../../img/sprite.png);
+  background-position: -44px -70px;
+  width: 44px;
+  height: 35px;
 }
 html {
   font-size: 16px;
@@ -5250,41 +5265,71 @@ body {
   fill: #fff;
 }
 #footer {
+  background: rgba(0, 0, 0, 0.015);
   border-top: 1px solid #dedede;
 }
-#footer .bar-middle {
-  padding: 45px 0;
+#footer .bar-top {
+  padding: 25px 0;
 }
-#footer .bar-middle .container {
+#footer .bar-top .container {
   display: flex;
 }
-#footer .bar-middle .site-map {
+#footer .bar-top .site-map {
   display: flex;
   font-size: 0.813rem;
 }
-#footer .bar-middle .site-map .list {
-  max-width: max-content;
-}
-#footer .bar-middle .site-map .list + .list {
-  margin-left: 50px;
-}
-#footer .bar-middle .site-map .list li:first-child {
+#footer .bar-top .site-map h2 {
   font-weight: 700;
   margin: 0 0 10px;
   text-transform: uppercase;
   letter-spacing: 0.25px;
+  font-size: 0.813rem;
 }
-#footer .bar-middle .site-map .list li {
+#footer .bar-top .site-map .list {
+  max-width: max-content;
+}
+#footer .bar-top .site-map .list + .list {
+  margin-left: 50px;
+}
+#footer .bar-top .site-map .list li {
   margin-top: 5px;
 }
-#footer .bar-middle .social {
-  flex: 3;
+#footer .bar-top .social {
+  display: flex;
+}
+#footer .bar-top .social .fab {
+  font-size: 1.25rem;
+  transition: all 0.15s linear;
+}
+#footer .bar-top .social a:hover .fab {
+  color: #2e7a2e;
+}
+#footer .bar-top .social li {
+  margin-top: 0 !important;
+}
+#footer .bar-top .social li + li {
+  margin-left: 8px;
+}
+#footer .bar-middle {
+  border-top: 1px solid #dedede;
+  padding: 25px 0;
+}
+#footer .bar-middle .payments {
+  display: flex;
+}
+#footer .bar-middle .payments .icon {
+  background-color: #f4f4f4;
+}
+#footer .bar-middle .payments li + li {
+  margin-left: 5px;
+}
+#footer .bar-bottom {
+  border-top: 1px solid #dedede;
 }
 #footer .bar-bottom .address {
   text-align: center;
   font-size: 0.75rem;
   padding: 15px 0;
-  border-top: 1px solid #dedede;
 }
 main {
   min-height: 600px;
@@ -5322,6 +5367,10 @@ main {
   margin-bottom: 50px;
   text-align: center;
 }
+.list-products .product {
+  display: block;
+  position: relative;
+}
 .list-products .product .image {
   max-width: 100%;
 }
@@ -5346,6 +5395,41 @@ main {
   font-weight: 700;
   font-size: 0.875rem;
 }
+.list-products .product .discount {
+  position: absolute;
+  right: 0;
+  bottom: 87px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.15);
+  font-weight: 300;
+  font-size: 1rem;
+}
+.list-products .product .btn-favorites {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 10px;
+  opacity: 0;
+  transition: all 0.25s linear;
+  color: #fff;
+  font-size: 18px;
+}
+.list-products .product .btn-favorites:hover {
+  color: red;
+}
+.list-products .product:hover .btn-favorites {
+  opacity: 1;
+}
+.list-products .product .btn-remove-favorites {
+  color: red;
+  opacity: 1;
+  transform: scale(0.9);
+}
+.list-products .product .btn-remove-favorites:hover {
+  transform: scale(1);
+}
 .title-section {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -5363,4 +5447,7 @@ main {
   position: absolute;
   left: 0;
   bottom: -5px;
+}
+.icon {
+  display: block;
 }

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 	less: {
 		development: {
 			files: {
-				'assets/css/style.css': 'assets/less/style.less'
+				'assets/css/min/style.min.css': 'assets/less/style.less'
 			}
 		}
 	},
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		target : {
 			files : [ { 
 				expand:	true,
-				cwd: 	'assets/css',
+				cwd: 	'assets/css/min',
 				src:	['*css'],
 				dest: 	'assets/css/min',
 				ext: 	'.min.css'
@@ -32,8 +32,9 @@ module.exports = function(grunt) {
 	sprite:{
 		all: {
 			src: 'assets/img/icons/*.png',
-			dest: 'assets/img/icons.png',
+			dest: 'assets/img/sprite.png',
 			cssFormat: 'css',
+			imgPath: '../../img/sprite.png',
 			destCss: 'assets/less/icons.less'
 		}
     },
@@ -58,11 +59,11 @@ module.exports = function(grunt) {
 		},
 		less: {
 			files: ['**/*.less'],
-			tasks: ['less','cssmin']
+			tasks: ['less']
 		},
 		spriteIcons: {
 			files: ['assets/img/icons/*.png'],
-			tasks: ['sprite','less','cssmin']
+			tasks: ['sprite','less',]
 		}
 	},
   });

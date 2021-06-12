@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
 
-<title>Lorem ipsum</title>
+<title>E-Commerce - Portifólio</title>
 
 <link rel="stylesheet" href="assets/css/min/style.min.css">

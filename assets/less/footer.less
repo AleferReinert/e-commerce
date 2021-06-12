@@ -1,10 +1,11 @@
 // Footer
 
 #footer {
+    background: rgba(0,0,0,0.015);
     border-top: 1px solid @border-color;
 
-    .bar-middle {
-        padding: 45px 0;
+    .bar-top {
+        padding: 25px 0;
 
         .container {
             display: flex;
@@ -14,18 +15,19 @@
             display: flex;
             font-size: @font-13px;
 
+            h2 {
+                font-weight: 700;
+                margin: 0 0 10px;
+                text-transform: uppercase;
+                letter-spacing: 0.25px;
+                font-size: @font-13px;
+            }
+
             .list {
                 max-width: max-content;
                 
                 + .list {
                     margin-left: 50px;
-                }
-
-                li:first-child {
-                    font-weight: 700;
-                    margin: 0 0 10px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.25px;
                 }
                 
                 li {
@@ -35,17 +37,54 @@
         }
 
         .social {
-            flex: 3;
+            display: flex;
+
+            .fab {
+                font-size: @font-20px;
+                transition: all 0.15s linear;
+            }
+
+            a:hover .fab {
+                color: @color-primary;
+            }
+
+            li {
+                margin-top: 0 !important;
+
+                + li {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    .bar-middle {
+        border-top: 1px solid @border-color;
+        padding: 25px 0;
+
+        .payments {
+            display: flex;
+
+            .icon {
+                background-color: #f4f4f4;
+            }
+
+            li {
+
+                + li {
+                    margin-left: 5px;
+                }
+            }
         }
     }
 
     .bar-bottom {
+        border-top: 1px solid @border-color;
 
         .address {
             text-align: center;
             font-size: @font-12px;
             padding: 15px 0;
-            border-top: 1px solid @border-color;
         }
     }
 }

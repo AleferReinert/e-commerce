@@ -17,16 +17,39 @@
 			<div class="container">
 				<h1 class="title-section">Promoções</h1>
 				<ul class="list-products">
-					<?php for($i = 1; $i<= 12; $i++) : ?>
+					<?php for($i = 1; $i<= 12; $i++) : 
+
+						// Apenas aplica desconto em produtos aleatórios para exemplo de layout 
+						if($i == 2 || $i == 8 || $i == 10) {
+							$discount = true;
+						} else {
+							$discount = false;
+						}
+
+						// Apenas deixa produtos já favoritados para exemplo de layout 
+						if($i == 3 || $i == 7) {
+							$favorited = 'false';
+						} else {
+							$favorited = 'true';
+						}
+					?>
 					<li>
 						<a href="" class="product">
 							<img class="image" src="assets/img/content/product-1.jpg" alt="">
 							<h2 class="name">Camiseta Adidas Trefoil</h2>
-							<div class="price-original">De <span>R$ 99,90</span></div>
-							<div class="price-final">Por <span>R$ 89,90</span></div>
-							<div class="discount">10% off</div>
+							
+							<?php if($discount == true) { ?>
+								<div class="price-original"><span>R$ 99,90</span></div>
+							<?php } ?>
+
+							<div class="price-final"><span>R$ 89,90</span></div>
+
+							<?php if($discount == true) { ?>
+								<div class="discount">10% off</div>
+							<?php } ?>
+
 							<form action="">
-								<input type="hidden" name="favorite" value="false">
+								<input type="hidden" name="favorite" value="<?php echo $favorited; ?>">
 								<button type="submit" class="btn-favorites btn-add-favorites" title="Adicionar aos favoritos">
 									<span class="far fa-heart"></span>
 								</button>

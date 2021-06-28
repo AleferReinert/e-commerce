@@ -15,8 +15,45 @@ function dropdown(dropdown, target){
     
 }
 
+// Collapse
+function collapse(){
+    
+    $('[data-toggle="collapse"]').each(function(){
+        var target      = $(this).attr('data-target'),
+            accordion   = $(this).attr('data-parent'),
+            button      = '[data-target="'+target+'"]';
+
+        if(typeof(target) == 'undefined') {
+            var target = $(this).attr('href'),
+                button      = 'a[href="'+target+'"]';;
+        }
+
+        if($(this).hasClass('collapsed')){
+            $(target).slideUp();
+        }
+        
+        $(this).click(function(){
+
+            if($(target).is(':hidden')){
+
+                if(typeof(accordion) != 'undefined') {
+                    $(accordion).find('.collapse:not('+target+')').slideUp();
+                    $(accordion).find('[data-toggle="collapse"]:not('+target+')').addClass('collapsed').removeClass('show');
+                }
+                
+                $(button).removeClass('collapsed').addClass('show');
+                $(target).stop().stop().slideDown().addClass('visible').removeClass('hidden');
+            } else {
+                $(button).removeClass('show').addClass('collapsed');
+                $(target).stop().stop().slideUp().addClass('hidden').removeClass('visible');
+            }
+        });
+    });
+    
+}
+
+// Adicionar produto aos favoritos
 function addFavorites(product){
-    console.log(product);
     var value = $(product).find('[name="favorite"]'),
         btn = $(product).find('.btn-favorites'),
         icon = $(btn).find('[class*="fa-"]');
@@ -43,22 +80,66 @@ function verifyFavorites() {
     });
 }
 
+// Da um padding no body pra compensar a altura do topo que está fixo 
+function paddingBody() {
+    $('body').css('padding-top',$('#header').height());
+}
+
 $(document).ready(function(){
     dropdown();
+    collapse();
 
-    // Menu principal
-    dropdown('.menu > ul > li', '.submenu-primary');
+    // Menu principal desktop
+    dropdown('.bar-bottom .menu > ul > li', '.submenu-primary');
+
+    // Carousel de texto no header
+    $('.carousel-header').owlCarousel({
+        items: 1,
+        autoplay: true,
+        dots: false,
+        itemElement: 'li',
+        stageElement: 'ul',
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        rewind: true
+    });
 
     // Função de adicionar aos favoritos caso haja produtos na página
     if($('.product').length) {
-        
         verifyFavorites();
 
         $('.btn-favorites').click(function(e){
             e.preventDefault();
-
             var product = $(this).parent().parent('.product');
             addFavorites(product);
         });
     }
+
+    // Da focus no input ao abrir a busca mobile
+    $('button[data-target="#header-search"]').click(function(){
+        console.log('cliquei');
+        $('#header-search input[type="text"]').focus();
+    });
+
+    /*
+        Menu mobile
+        Ao clicar em uma categoria, resposiciona (scroll) para que aparece o máximo de itens da categoria filha
+    */
+    /*$('#menu-mobile .menu > ul > li > button.collapsed').click(function(){
+        var menuPosition    = $('.menu').position().top,
+            currentPosition = $(this).parent().position().top,
+            scroll          = currentPosition - menuPosition;
+
+        $('#menu-mobile .menu').scrollTop(scroll);
+    });*/
+});
+
+$(window).resize(function(){
+    paddingBody();
+});
+
+$(window).on('load', function(){
+    setTimeout(function(){
+        paddingBody();
+    }, 1000);
 });

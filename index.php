@@ -15,7 +15,6 @@
 
 		<section class="products">
 			<div class="container">
-				<h1 class="title-section">Promoções</h1>
 				<ul class="list-products">
 					<?php for($i = 1; $i<= 12; $i++) : 
 
@@ -60,6 +59,15 @@
 				</ul>
 			</div>
 		</section>
+		<div class="bar-newsletter">
+			<div class="container">
+				<form action="">
+					<label for="">Cadastre-se para receber ofertas e descontos exclusivos!</label>
+					<input type="text" placeholder="Digite seu e-mail..." class="form-control">
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
+				</form>
+			</div>
+		</div>
 	</main>
 	
 	<?php include 'inc/footer.php'; ?>

@@ -23,10 +23,11 @@ ul {
 
 input {
     font-family: @font-primary;
+}
 
-    &:focus {
-        outline: none;
-    }
+input:focus,
+a:focus-visible {
+    outline: none;
 }
 
 ::placeholder {
@@ -39,8 +40,6 @@ button {
 
 button {
     border: 0;
-}
-
-button {
     background: transparent;
+    padding: 0;
 }

@@ -2,32 +2,45 @@
     <div class="bar-top">
         <nav class="container">
             <div class="site-map">
-                <div class="list">
-                    <h2>Institucional</h2>
-                    <ul>
-                        <li>Institucional</li>
+                <div class="column">
+                    <h2 data-toggle="collapse" class="collapsed" data-target="#list-about" data-parent=".site-map">
+                        Institucional
+                        <span class="fa fa-angle-down icon-collapsed"></span>
+                        <span class="fa fa-angle-up icon-show"></span>
+                    </h2>
+                    <ul class="list collapse" id="list-about">
                         <li><a href="#">Lojas</a></li>
                         <li><a href="#">Sobre nós</a></li>
                         <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
-                <div class="list">
-                    <h2>Ajuda e suporte</h2>
-                    <ul>
+                <div class="column">
+                    <h2 data-toggle="collapse" class="collapsed" data-target="#list-support" data-parent=".site-map">
+                        Ajuda e suporte
+                        <span class="fa fa-angle-down icon-collapsed"></span>
+                        <span class="fa fa-angle-up icon-show"></span>
+                    </h2>
+                    <ul class="list collapse" id="list-support">
                         <li><a href="#">Prazos de entrega</a></li>
                         <li><a href="#">Trocas e devoluções</a></li>
                         <li><a href="#">Perguntas Frequentes</a></li>
                         <li><a href="#">Política de privacidade</a></li>
                     </ul>
                 </div>
-                <div class="list">
-                    <h2>Contato</h2>
-                    <ul>
-                        <li><a href="#">Tel.: (47) 00000-0000</a></li>
+                <div class="column">
+                    <h2 data-toggle="collapse" class="collapsed" data-target="#list-contact" data-parent=".site-map">
+                        Contato
+                        <span class="fa fa-angle-down icon-collapsed"></span>
+                        <span class="fa fa-angle-up icon-show"></span>
+                    </h2>
+                    <ul class="list collapse" id="list-contact">
+                        <li><a href="#">Tel.: (47) 55555-5555</a></li>
+                        <li><a href="#">Tel.2: (47) 55555-5555</a></li>
                         <li><a href="#">E-mail: atendimento@loja.com.br</a></li>
                     </ul>
                 </div>
-                <div class="list">
+                <div class="column">
                     <h2>Social</h2>
                     <ul class="social">
                         <li>
@@ -43,6 +56,16 @@
                         <li>
                             <a title="Whatsapp" href="https://web.whatsapp.com/send?phone=5547999219066" target="_blank">
                                 <span class="fab fa-whatsapp"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Pinterest" href="https://pinterest.com" target="_blank">
+                                <span class="fab fa-pinterest"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Twitter" href="https://twitter.com" target="_blank">
+                                <span class="fab fa-twitter"></span>
                             </a>
                         </li>
                     </ul>
@@ -62,11 +85,21 @@
                 <li><span class="icon icon-hipercard" title="Hipercard"></span></li>
                 <li><span class="icon icon-pix" title="Pix"></span></li>
             </ul>
+            <ul class="security">
+                <li><span class="icon icon-ssl-security"></span></li>
+                <li><span class="icon icon-google-security"></span></li>
+            </ul>
+            <p class="developed">
+                Developed by
+                <br>
+                Alefer Reinert
+            </p>
         </div>
     </div>
     <div class="bar-bottom">
         <div class="address">
             <div class="container">
+                <p>E-Commerce Comércio LTDA - CNPJ 00.000.000/0000-00</p>
                 <address>Rua Ricardo Fischer Stein, 438 - Bairro Nações - Indaial - SC - CEP 89086-172</address>
             </div>
         </div>

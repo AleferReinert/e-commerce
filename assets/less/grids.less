@@ -3,18 +3,18 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 @column-gap;
     box-sizing: border-box;
 
-    @media all and (min-width: 768px) {
-        max-width: if((@container-fluid = true), none, 720px);
+    @media all and (min-width: @breakpoint-medium) {
+        max-width: if((@container-fluid = true), none, @container-medium);
     }
     
-    @media all and (min-width: 992px) {
-        max-width: if((@container-fluid = true), none, 960px);
+    @media all and (min-width: @breakpoint-large) {
+        max-width: if((@container-fluid = true), none, @container-large);
     }
     
-    @media all and (min-width: 1200px) {
-        max-width: if((@container-fluid = true), none, 1140px);
+    @media all and (min-width: @breakpoint-extralarge) {
+        max-width: if((@container-fluid = true), none, @container-extralarge);
     }
 }

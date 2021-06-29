@@ -1,7 +1,7 @@
 {
-  "name": "portifolio1",
+  "name": "e-commerce-portifolio",
   "version": "1.0.0",
-  "description": "Projeto para portifolio",
+  "description": "e-commerce responsivo",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {

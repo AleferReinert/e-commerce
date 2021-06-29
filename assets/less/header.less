@@ -218,6 +218,7 @@
             position: absolute;
             top: -(@arrow-height * 2);
             right: 10px;
+            cursor: pointer;
         }
 
         &::before {
@@ -231,6 +232,8 @@
     .bar-middle {
         padding: 15px 0;
         position: relative;
+        background: #fff;
+        box-shadow: 0 5px 5px 0px rgba(0,0,0,0.05);
         
         .container {
             display: grid;
@@ -305,6 +308,8 @@
     .bar-bottom {
         background: @color-primary;
         position: relative;
+        transition: all 0.15s linear;
+        z-index: -1;
 
         .menu {
             display: none;

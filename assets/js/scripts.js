@@ -85,10 +85,31 @@ function paddingBody() {
     $('body').css('padding-top',$('#header').height());
 }
 
+// Desktop: esconde ou exibe menu de categorias do topo conforme o scroll
+function collapseCategoryHeader() {
+    if($(window).width() >= 992){
+
+        var lastScrollTop = 0,
+            menuCategory = $('#header .bar-bottom'),
+            menuCategoryHeight = $(menuCategory).height();
+
+        $(window).scroll(function(){
+            var scrollTop = $(this).scrollTop();
+
+            if(scrollTop > lastScrollTop && scrollTop > 200 && $(menuCategory).find('.menu > ul > li.active').length == 0) {
+                $(menuCategory).css('margin-top',-menuCategoryHeight);
+            } else {
+                $(menuCategory).css('margin-top',0);
+            }
+            lastScrollTop = scrollTop; 
+        });
+    }
+}
+
 $(document).ready(function(){
     dropdown();
     collapse();
-
+    
     // Menu principal desktop
     dropdown('.bar-bottom .menu > ul > li', '.submenu-primary');
 
@@ -120,18 +141,6 @@ $(document).ready(function(){
         console.log('cliquei');
         $('#header-search input[type="text"]').focus();
     });
-
-    /*
-        Menu mobile
-        Ao clicar em uma categoria, resposiciona (scroll) para que aparece o máximo de itens da categoria filha
-    */
-    /*$('#menu-mobile .menu > ul > li > button.collapsed').click(function(){
-        var menuPosition    = $('.menu').position().top,
-            currentPosition = $(this).parent().position().top,
-            scroll          = currentPosition - menuPosition;
-
-        $('#menu-mobile .menu').scrollTop(scroll);
-    });*/
 });
 
 $(window).resize(function(){
@@ -140,6 +149,9 @@ $(window).resize(function(){
 
 $(window).on('load', function(){
     setTimeout(function(){
+
         paddingBody();
+        collapseCategoryHeader();
+
     }, 1000);
 });

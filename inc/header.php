@@ -45,8 +45,8 @@
         <div class="container">
             <div class="carousel-header owl-carousel">
                 <div>Frete grátis para sul e sudeste</div>
-                <div>Produtos com até 70% OFF</div>
-                <div>Em até 10x sem juros no cartão</div>
+                <div>Produtos com até 70% de desconto</div>
+                <div>Parcele em até 10x sem juros no cartão</div>
             </div>
             <nav>
                 <ul>

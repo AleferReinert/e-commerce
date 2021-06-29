@@ -106,5 +106,7 @@
     </div>
 </footer>
 
+<div id="background-page"></div>
+
 <script type="text/javascript" src="assets/js/min/scripts.min.js"></script>
 <script src="//localhost:35729/livereload.js"></script>

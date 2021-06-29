@@ -12,12 +12,10 @@ function dropdown(dropdown, target){
             $(this).find(target).stop().stop().slideUp();
         });
     });
-    
 }
 
 // Collapse
 function collapse(){
-    
     $('[data-toggle="collapse"]').each(function(){
         var target      = $(this).attr('data-target'),
             accordion   = $(this).attr('data-parent'),
@@ -33,14 +31,11 @@ function collapse(){
         }
         
         $(this).click(function(){
-
             if($(target).is(':hidden')){
-
                 if(typeof(accordion) != 'undefined') {
                     $(accordion).find('.collapse:not('+target+')').slideUp();
                     $(accordion).find('[data-toggle="collapse"]:not('+target+')').addClass('collapsed').removeClass('show');
                 }
-                
                 $(button).removeClass('collapsed').addClass('show');
                 $(target).stop().stop().slideDown().addClass('visible').removeClass('hidden');
             } else {
@@ -49,7 +44,6 @@ function collapse(){
             }
         });
     });
-    
 }
 
 // Adicionar produto aos favoritos
@@ -74,7 +68,6 @@ function addFavorites(product){
 
 // Verifica se cada produto está ou não adicionado aos favoritos
 function verifyFavorites() {
-
     $('.product').each(function(){
         addFavorites(this);
     });
@@ -87,23 +80,42 @@ function paddingBody() {
 
 // Desktop: esconde ou exibe menu de categorias do topo conforme o scroll
 function collapseCategoryHeader() {
-    if($(window).width() >= 992){
+    var lastScrollTop = 0,
+        menuCategory = $('#header .bar-bottom'),
+        menuCategoryHeight = $(menuCategory).height();
 
-        var lastScrollTop = 0,
-            menuCategory = $('#header .bar-bottom'),
-            menuCategoryHeight = $(menuCategory).height();
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop();
 
-        $(window).scroll(function(){
-            var scrollTop = $(this).scrollTop();
+        if(scrollTop > lastScrollTop && scrollTop > 200 && $(menuCategory).find('.menu > ul > li.active').length == 0) {
+            $(menuCategory).css('margin-top',-menuCategoryHeight);
+        } else {
+            $(menuCategory).css('margin-top',0);
+        }
+        lastScrollTop = scrollTop; 
+    });
+}
 
-            if(scrollTop > lastScrollTop && scrollTop > 200 && $(menuCategory).find('.menu > ul > li.active').length == 0) {
-                $(menuCategory).css('margin-top',-menuCategoryHeight);
-            } else {
-                $(menuCategory).css('margin-top',0);
+// Menu de categorias Desktop
+function checkSubmenusQuantity() {
+
+    $('#header .menu > ul > li').each(function(){
+
+        // Verifica se tem apenas um submenu para pode estilizar diferente
+        if($(this).find('.submenu-primary').length && $(this).find('.submenu-secondary').length == 0){
+            $(this).addClass('only-submenu-primary');
+        }
+
+        // Se tiver submenu, aciona o background
+        $(this).mouseenter(function(){
+
+            if($(this).hasClass('active') && $(this).find('.submenu-primary').length){
+                $('#background-page').stop().fadeIn();
             }
-            lastScrollTop = scrollTop; 
+        }).mouseleave(function(){
+            $('#background-page').stop().fadeOut();
         });
-    }
+    });
 }
 
 $(document).ready(function(){
@@ -124,7 +136,7 @@ $(document).ready(function(){
         animateIn: 'fadeIn',
         rewind: true
     });
-
+    
     // Função de adicionar aos favoritos caso haja produtos na página
     if($('.product').length) {
         verifyFavorites();
@@ -141,6 +153,11 @@ $(document).ready(function(){
         console.log('cliquei');
         $('#header-search input[type="text"]').focus();
     });
+
+    // Funções apenas para desktop
+    if($(window).width() >= 992){
+        checkSubmenusQuantity();
+    }
 });
 
 $(window).resize(function(){
@@ -149,9 +166,11 @@ $(window).resize(function(){
 
 $(window).on('load', function(){
     setTimeout(function(){
-
         paddingBody();
-        collapseCategoryHeader();
-
+        
+        // Funções apenas para desktop
+        if($(window).width() >= 992){
+            collapseCategoryHeader();
+        }
     }, 1000);
 });

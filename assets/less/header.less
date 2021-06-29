@@ -153,6 +153,7 @@
     left: 0;
     right: 0; 
     z-index: 2;
+    //box-shadow: 0 5px 5px 0px rgba(0,0,0,0.05);
 
     .bar-top {
         background: rgba(0,0,0,0.035);
@@ -233,7 +234,6 @@
         padding: 15px 0;
         position: relative;
         background: #fff;
-        box-shadow: 0 5px 5px 0px rgba(0,0,0,0.05);
         
         .container {
             display: grid;
@@ -306,10 +306,11 @@
     }
 
     .bar-bottom {
-        background: @color-primary;
+        background: #fff;
         position: relative;
         transition: all 0.15s linear;
         z-index: -1;
+        border-bottom: 1px solid @border-color;
 
         .menu {
             display: none;
@@ -317,8 +318,6 @@
     }
 
     #header-search {
-        /*position: relative;
-        margin-right: -6px;*/
         position: absolute;
         top: 55px;
         left: 0;
@@ -329,11 +328,12 @@
             font-size: 0;
         }
 
-        .form-control {
+        .input {
             width: 100%;
             border-color: transparent;
             background: rgba(0,0,0,0.05);
             height: 50px;
+            border-radius: 0;
         }
 
         .btn {
@@ -390,10 +390,11 @@
             right: auto;
             background: transparent;
 
-            .form-control {
+            .input {
                 height: 40px;
                 border-color: @border-color;
                 background: #fff;
+                border-radius: @form-radius;
             }
 
             .btn {
@@ -488,31 +489,72 @@
                 button.collapsed {
                     display: none;
                 }
+
+                .only-submenu-primary .submenu-primary {
+
+                    ul {
+                        display: grid;
+                        grid-template-columns: repeat(4, max-content);
+                        width: max-content !important;
+                        padding-top: 25px;
+                    }
+                    
+                    a {
+                        font-weight: 400;
+                        font-size: @font-14px;
+                        padding: 3px 0;
+                        margin: 0;
+                        text-transform: none;
+
+                        &:hover {
+                            transform: translateX(1px);
+                        }
+                    }
+                }
                 
                 > ul {
                     font-size: 0;
-                    margin-left: -15px;
+                    margin-left: -@column-gap;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
         
                     > li {
                         display: inline-block;
+
+                        &:last-child > a {
+                            font-weight: 600;
+                        }
             
                         > a:hover,
                         &.active > a {
-                            background: #fff;
-                            color: @color-primary;
+                            color: #000;
+
+                            &::after {
+                                opacity: 1;
+                            }
                         }
             
                         > a {
-                            color: #fff;
                             font-size: @font-12px;
                             line-height: @font-17px;
                             padding: 15px;
                             display: inline-block;
                             transition: all @transition-duration linear;
                             text-transform: uppercase;
-                            letter-spacing: 0.5px; 
+                            letter-spacing: 1px; 
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                opacity: 0;
+                                position: absolute;
+                                left: 8px;
+                                right: 8px;
+                                bottom: -1px;
+                                height: 2px;
+                                background: #000;
+                                transition: all 0.15s linear;
+                            }
                         }
                     }
                 }
@@ -521,7 +563,7 @@
             .submenu-primary {
                 background: #fff;
                 position: absolute;
-                top: 47px;
+                top: 48px;
                 left: 0;
                 right: 0;
                 z-index: 2;
@@ -571,6 +613,11 @@
                 a {
                     padding: 2px 0;
                     font-size: @font-14px;
+
+                    &:hover {
+                        color: #000;
+                        transform: translateX(1px);
+                    }
                 }
             }
         }

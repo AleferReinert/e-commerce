@@ -1,7 +1,7 @@
 <nav class="menu">
     <ul>
         <li>
-            <a href="">Masculino</a>
+            <a href="category.php">Masculino</a>
             <button class="collapsed" data-toggle="collapse" data-target="#category-masculino" data-parent=".menu">
                 <span class="fa fa-angle-down icon-collapsed"></span>
                 <span class="fa fa-angle-up icon-show"></span>

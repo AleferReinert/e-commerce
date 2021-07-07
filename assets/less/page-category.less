@@ -1,0 +1,126 @@
+// Category Page
+.page-category {
+
+    .page-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-column-gap: @column-gap * 2;
+        margin-bottom: @row-gap;
+    }
+    
+    .page-title {
+        grid-row: 1;
+        grid-column: 2/4;
+        margin-bottom: 0;
+    }
+
+    .sorter-by {
+        grid-row: 1;
+        grid-column: 4/5;
+        font-size: @font-12px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .select2 {
+            margin-left: 8px;
+        }
+    }
+
+    .list-products {
+        grid-row: 2;
+        grid-column: 2/5;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 30px;
+    }
+
+    .pagination {
+        grid-row: 3;
+        grid-column: 2/5;
+    }
+    
+    #filters {
+        grid-row: 1 / 4;
+        grid-column: 1;
+
+        .fieldset {
+            font-size: 0;
+            margin-bottom: 15px;
+            padding: 0 10px 20px;
+            background: rgba(0,0,0,0.025);
+            border-radius: 5px;
+        }
+
+        .fieldset-color {
+
+            label {
+                color: transparent;
+                border-radius: 100%;
+            }
+
+            [type="radio"] {
+                border: 1px solid @border-color;
+                border-radius: 100%;
+
+                &::after {
+                    border: 0;
+                }
+            }
+        }
+
+        legend {
+            display: block;
+            text-transform: uppercase;
+            font-size: @font-12px;
+            font-weight: 500;
+            padding: 20px 0 10px;
+        }
+
+        label {
+            display: block;
+            font-size: @font-12px;
+            line-height: 16px;
+            color: rgba(0,0,0,0.65);
+            overflow: hidden;
+
+            + label {
+                margin-top: 5px;
+            }
+        }
+
+        .inline {
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 5px;
+
+            label {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: @font-10px;
+                background: #fff;
+                margin: 0;
+
+                input {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+
+                    &::after {
+                        background: transparent;
+                    }
+                }
+
+                &:hover {
+                    border-color: darken(@border-color, 2%);
+                    color: darken(rgba(0,0,0,0.65), 2%);
+                }
+            }
+        }
+    }
+}

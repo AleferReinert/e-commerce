@@ -154,6 +154,13 @@ $(document).ready(function(){
         $('#header-search input[type="text"]').focus();
     });
 
+    // Filtro de produtos - Background color nos inputs checkbox
+    if($('#filters .fieldset-color').length){
+        $('#filters .fieldset-color label').each(function(){
+            $(this).find('input').css('background', $(this).find('input').attr('value'))
+        });
+    }
+
     // Funções apenas para desktop
     if($(window).width() >= 992){
         checkSubmenusQuantity();

@@ -10,7 +10,7 @@
                     </h2>
                     <ul class="list collapse" id="list-about">
                         <li><a href="#">Lojas</a></li>
-                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="<?php echo $urlBase; ?>/sobre-nos">Sobre nós</a></li>
                         <li><a href="#">Trabalhe conosco</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
@@ -22,10 +22,10 @@
                         <span class="fa fa-angle-up icon-show"></span>
                     </h2>
                     <ul class="list collapse" id="list-support">
-                        <li><a href="#">Prazos de entrega</a></li>
-                        <li><a href="#">Trocas e devoluções</a></li>
-                        <li><a href="#">Perguntas Frequentes</a></li>
-                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="<?php echo $urlBase; ?>/prazos-de-entrega">Prazos de entrega</a></li>
+                        <li><a href="<?php echo $urlBase; ?>/trocas-e-devolucoes">Trocas e devoluções</a></li>
+                        <li><a href="<?php echo $urlBase; ?>/perguntas-frequentes">Perguntas Frequentes</a></li>
+                        <li><a href="<?php echo $urlBase; ?>/politica-de-privacidade">Política de privacidade</a></li>
                     </ul>
                 </div>
                 <div class="column">
@@ -108,5 +108,5 @@
 
 <div id="background-page"></div>
 
-<script type="text/javascript" src="assets/js/min/scripts.min.js"></script>
+<script type="text/javascript" src="<?php echo $urlBase; ?>/assets/js/min/scripts.min.js"></script>
 <script src="//localhost:35729/livereload.js"></script>

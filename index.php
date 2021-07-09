@@ -3,7 +3,7 @@
 <head>
 	<?php include 'inc/head.php'; ?>
 </head>
-<body class="page-home">
+<body id="page-home">
 	<?php include 'inc/header.php'; ?>
 
 	<main>
@@ -30,6 +30,5 @@
 	</main>
 	
 	<?php include 'inc/footer.php'; ?>
-	<script type="text/javascript" src="assets/js/min/scripts-home.min.js"></script>
 </body>
 </html>

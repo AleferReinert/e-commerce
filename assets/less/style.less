@@ -25,7 +25,14 @@
 @import 'page-home.less';
 @import 'page-login.less';
 @import 'page-category.less'; 
+@import 'page-faq.less'; 
 
+// Padding de precaução para não esconder conteudo enquanto o script carrega
+body {
+    padding-top: 100px;
+    @media all and (min-width: @breakpoint-medium) {padding-top: 106px;}
+    @media all and (min-width: @breakpoint-large) {padding-top: 163px;}
+}
 
 // Owl Carousel (defaults)
 .owl-carousel {
@@ -61,6 +68,7 @@
 
 // Collapse
 [data-toggle="collapse"] {
+    cursor: pointer;
 
     &.collapsed {
         .icon-collapsed {display: block}
@@ -72,28 +80,6 @@
         .icon-show {display: block}
     }
 }
-
-// Section title
-/*.title-section {
-    font-size: @font-24px;
-    text-transform: uppercase;
-    padding-top: 40px;
-    margin-bottom: 40px;
-    font-weight: 900;
-    position: relative;
-
-    // Linha inferior
-    &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: @border-color;
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-    }
-}*/
 
 // Icons (sprite)
 .icon {

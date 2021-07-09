@@ -22,12 +22,13 @@ ul {
 }
 
 input {
-    font-family: @font-primary;
+    font-family: inherit;
     margin: 0;
 }
 
 input:focus,
-a:focus-visible {
+a:focus-visible,
+select:focus {
     outline: none;
 }
 
@@ -50,4 +51,10 @@ fieldset {
 
 label {
     cursor: pointer;
+}
+
+select {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
 }

@@ -1,7 +1,3 @@
-<?php
-    $authenticated = false;
-?>
-
 <header id="header">
     <div id="menu-mobile" class="collapse hidden">
         <button class="btn-close-menu-mobile" data-toggle="collapse" data-target="#menu-mobile">
@@ -31,8 +27,8 @@
                     </a>
                 </li>
                 <?php } else { ?>
-                    <li><a href="">Cadastre-se</a></li>
-                    <li><a href="login.php">Entrar</a></li>
+                    <li><a href="<?php echo $urlBase; ?>">Cadastre-se</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/login">Entrar</a></li>
                 <?php } ?>
             </ul>
         </nav>
@@ -77,7 +73,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="login.php">
+                            <a href="<?php echo $urlBase; ?>/login">
                                 <span class="fa fa-sign-in-alt"></span>
                                 Entrar
                             </a>
@@ -96,8 +92,8 @@
             </div>
             <div class="column">
                 <div class="logo">
-                    <a href="index.php">
-                        <img src="assets/img/content/logo.png" alt="E-Commerce">
+                    <a href="<?php echo $urlBase; ?>">
+                        <img src="<?php echo $urlBase; ?>/assets/img/content/logo.png" alt="E-Commerce">
                     </a>  
                 </div>
             </div>

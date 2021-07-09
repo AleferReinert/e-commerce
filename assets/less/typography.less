@@ -15,3 +15,32 @@ body {
 		font-size: @font-26px;
 	}
 }
+
+.page-only-text {
+
+	main {
+		margin: @row-gap 0;
+		
+		.container {
+			max-width: @container-medium; 
+		}
+
+		h2 {
+			color: #000;
+			font-size: @font-18px;
+			font-weight: 500;
+			margin-top: 30px;
+		}
+
+		p {
+			font-size: @font-13px;
+			text-indent: 20px;
+			line-height: 20px;
+			text-align: justify;
+
+			+ p {
+				margin-top: 10px;
+			}
+		}
+	}
+}

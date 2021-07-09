@@ -27,9 +27,9 @@ module.exports = function(grunt) {
 				'assets/js/min/scripts.min.js': [
 					'assets/js/jquery-3.6.0.js',
 					'assets/js/owl.carousel.min.js',
-					'assets/js/scripts.js'
-				],
-				//'assets/js/min/scripts-home.min.js': ['assets/js/home.js']
+					'assets/js/scripts.js',
+					'assets/js/home.js'
+				]
 			}
 		}
 	},

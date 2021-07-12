@@ -1,7 +1,7 @@
 <nav class="menu">
     <ul>
         <li>
-            <a href="<?php echo $urlBase; ?>/categoria">Masculino</a>
+            <a href="<?php echo $urlBase; ?>/categoria?category=masculino">Masculino</a>
             <button class="collapsed" data-toggle="collapse" data-target="#category-masculino" data-parent=".menu">
                 <span class="fa fa-angle-down icon-collapsed"></span>
                 <span class="fa fa-angle-up icon-show"></span>
@@ -9,63 +9,63 @@
             <div class="submenu-primary collapse hidden" id="category-masculino">
                 <ul>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Camisas</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas">Camisas</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-masculino-camisas" data-parent="#category-masculino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-masculino-camisas">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Manga curta</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Manga longa</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Regatas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Listradas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Personalizadas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Polos</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas&subcategory-secondary=manga curta">Manga curta</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas&subcategory-secondary=manga longa">Manga longa</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas&subcategory-secondary=regatas">Regatas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas&subcategory-secondary=listradas">Listradas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas&subcategory-secondary=personalizadas">Personalizadas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=camisas&subcategory-secondary=polos">Polos</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Calças</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calças">Calças</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-masculino-calcas" data-parent="#category-masculino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-masculino-calcas">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Jeans</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Malha</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Tactel</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Moletom</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calças&subcategory-secondary=jeans">Jeans</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calças&subcategory-secondary=malha">Malha</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calças&subcategory-secondary=tactel">Tactel</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calças&subcategory-secondary=moletom">Moletom</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Calçados</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calçados">Calçados</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-masculino-calcados" data-parent="#category-masculino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-masculino-calcados">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Tênis</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Coturnos</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Chinelos</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Pantufas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calçados&subcategory-secondary=tênis">Tênis</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calçados&subcategory-secondary=coturnos">Coturnos</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calçados&subcategory-secondary=chinelos">Chinelos</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=calçados&subcategory-secondary=pantufas">Pantufas</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Roupas íntimas</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=roupas íntimas">Roupas íntimas</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-masculino-roupas-intimas" data-parent="#category-masculino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-masculino-roupas-intimas">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Cuecas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Meias</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Pijamas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=roupas íntimas&subcategory-secondary=cuecas">Cuecas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=roupas íntimas&subcategory-secondary=meias">Meias</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=masculino&subcategory-primary=roupas íntimas&subcategory-secondary=pijamas">Pijamas</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </li>
         <li>
-            <a href="<?php echo $urlBase; ?>/categoria">Feminino</a>
+            <a href="<?php echo $urlBase; ?>/categoria?category=feminino">Feminino</a>
             <button class="collapsed" data-toggle="collapse" data-target="#category-feminino" data-parent=".menu">
                 <span class="fa fa-angle-down icon-collapsed"></span>
                 <span class="fa fa-angle-up icon-show"></span>
@@ -73,97 +73,97 @@
             <div class="submenu-primary collapse hidden" id="category-feminino">
                 <ul>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Camisas</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=camisas">Camisas</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-feminino-camisas" data-parent="#category-feminino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-feminino-camisas">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Manga curta</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Manga longa</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Regatas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Listradas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Personalizadas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=camisas&subcategory-secondary=manga curta">Manga curta</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=camisas&subcategory-secondary=manga longa">Manga longa</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=camisas&subcategory-secondary=regatas">Regatas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=camisas&subcategory-secondary=listradas">Listradas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=camisas&subcategory-secondary=personalizadas">Personalizadas</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Calças</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças">Calças</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-feminino-calcas" data-parent="#category-feminino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-feminino-calcas">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Jeans</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Malha</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Tactel</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Moletom</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Legging</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Boca de sino</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças&subcategory-secondary=jeans">Jeans</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças&subcategory-secondary=malha">Malha</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças&subcategory-secondary=tactel">Tactel</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças&subcategory-secondary=moletom">Moletom</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças&subcategory-secondary=legging">Legging</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calças&subcategory-secondary=boca de sino">Boca de sino</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Calçados</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calçados">Calçados</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-feminino-calcados" data-parent="#category-feminino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-feminino-calcados">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Botas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Saltos</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Sapatilhas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Tênis</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Sandálias</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calçados&subcategory-secondary=botas">Botas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calçados&subcategory-secondary=saltos">Saltos</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calçados&subcategory-secondary=sapatilhas">Sapatilhas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calçados&subcategory-secondary=tênis">Tênis</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=calçados&subcategory-secondary=sandálias">Sandálias</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo $urlBase; ?>/categoria">Acessórios</a>
+                        <a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=acessórios">Acessórios</a>
                         <button class="collapsed" data-toggle="collapse" data-target="#category-feminino-accessorios" data-parent="#category-feminino">
                             <span class="fa fa-angle-down icon-collapsed"></span>
                             <span class="fa fa-angle-up icon-show"></span>
                         </button>
                         <ul class="submenu-secondary collapse hidden" id="category-feminino-accessorios">
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Bolsas</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Carteiras</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Óculos</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Relógios</a></li>
-                            <li><a href="<?php echo $urlBase; ?>/categoria">Lenços</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=acessórios&subcategory-secondary=bolsas">Bolsas</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=acessórios&subcategory-secondary=carteiras">Carteiras</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=acessórios&subcategory-secondary=óculos">Óculos</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=acessórios&subcategory-secondary=relógios">Relógios</a></li>
+                            <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=acessórios&subcategory-secondary=lenços">Lenços</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Vestidos</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=feminino&subcategory-primary=vestidos">Vestidos</a></li>
                 </ul>
             </div>
         </li>
-        <li><a href="<?php echo $urlBase; ?>/categoria">Infantil</a></li>
-        <li><a href="<?php echo $urlBase; ?>/categoria">Básico</a></li>
-        <li><a href="<?php echo $urlBase; ?>/categoria">Esportes</a></li>
-        <li><a href="<?php echo $urlBase; ?>/categoria">Novidades</a></li>
-        <li><a href="<?php echo $urlBase; ?>/categoria">Ofertas</a></li>
+        <li><a href="<?php echo $urlBase; ?>/categoria?category=infantil">Infantil</a></li>
+        <li><a href="<?php echo $urlBase; ?>/categoria?category=básico">Básico</a></li>
+        <li><a href="<?php echo $urlBase; ?>/categoria?category=esportes">Esportes</a></li>
+        <li><a href="<?php echo $urlBase; ?>/categoria?category=novidades">Novidades</a></li>
+        <li><a href="<?php echo $urlBase; ?>/categoria?category=ofertas">Ofertas</a></li>
         <li>
-            <a href="<?php echo $urlBase; ?>/categoria">Marcas</a>
+            <a href="<?php echo $urlBase; ?>/marcas">Marcas</a>
             <button class="collapsed" data-toggle="collapse" data-target="#category-marcas" data-parent=".menu">
                 <span class="fa fa-angle-down icon-collapsed"></span>
                 <span class="fa fa-angle-up icon-show"></span>
             </button>
             <div class="submenu-primary collapse hidden" id="category-marcas">
                 <ul>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Adidas</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Calvin Klein</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Cavalera</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Colcci</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Converse</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Everlast</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Lacoste</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Mizuno</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Mormaii</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Nike</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Oakley</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Puma</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Ray Ban</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Reebok</a></li>
-                    <li><a href="<?php echo $urlBase; ?>/categoria">Vans</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=adidas">Adidas</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=calvin klein">Calvin Klein</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=cavalera">Cavalera</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=colcci">Colcci</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=converse">Converse</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=everlast">Everlast</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=lacoste">Lacoste</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=mizuno">Mizuno</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=mormaii">Mormaii</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=nike">Nike</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=oakley">Oakley</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=puma">Puma</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=ray ban">Ray Ban</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=reebok">Reebok</a></li>
+                    <li><a href="<?php echo $urlBase; ?>/categoria?category=marcas&subcategory-primary=vans">Vans</a></li>
                 </ul>
             </div>
         </li>
-        <li><a href="<?php echo $urlBase; ?>/categoria">Outlet</a></li>
+        <li><a href="<?php echo $urlBase; ?>/categoria?category=outlet">Outlet</a></li>
     </ul>
 </nav>

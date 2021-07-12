@@ -1,3 +1,21 @@
+<?php 
+    $category = isset($_GET['category']) ? $_GET['category'] : '';
+    $subcategoryPrimary = isset($_GET['subcategory-primary']) ? $_GET['subcategory-primary'] : '';
+    $subcategorySecondary = isset($_GET['subcategory-secondary']) ? $_GET['subcategory-secondary'] : '';
+
+
+    if($subcategorySecondary !== ''){
+        $categoryTitle = $subcategorySecondary;
+        $categoryLevels = 3;
+    } else if ($subcategoryPrimary !== ''){
+        $categoryTitle = $subcategoryPrimary;
+        $categoryLevels = 2;
+    } else {
+        $categoryTitle = $category;
+        $categoryLevels = 1;
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,16 +31,23 @@
                     <li>
                         <a href="<?php echo $urlBase; ?>">Início</a>
                     </li>
-                    <li>
-                        Masculino
-                    </li>
+
+                    <?php if($categoryLevels == 3 || $categoryLevels == 2): ?>
+                        <li><a href="<?php echo $urlBase; ?>/categoria?category="><?php echo $category; ?></a></li>
+                    <?php endif; ?>
+
+                    <?php if($categoryLevels == 3): ?>
+                        <li><a href="<?php echo $urlBase; ?>/categoria?category="><?php echo $subcategoryPrimary; ?></a></li>
+                    <?php endif; ?>
+
+                    <li><?php echo $categoryTitle; ?></li>
                 </ul>
             </nav>
         </div>
         
         <div class="container page-content">
             <div class="page-title">
-                <h1 class="title">Masculino</h1>
+                <h1 class="title"><?php echo $categoryTitle; ?></h1>
             </div>
             <label class="sorter-by">
                 Ordenar por: 

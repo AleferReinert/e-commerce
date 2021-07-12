@@ -291,6 +291,10 @@
             font: 700 @font-9px/@size @font-primary;
         }
 
+        .cart .quantity {
+            background: @color-primary;
+        }
+
         .svg-heart, 
         .svg-shopping-bag {
             @size: 30px;
@@ -402,7 +406,7 @@
                 .svg-search {
 
                     path {
-                        fill: @color-primary;
+                        fill: rgba(0,0,0,0.85);
                     }
                 }
             }
@@ -481,6 +485,7 @@
 
         .bar-bottom {
             position: relative;
+            background: @color-primary;
 
             .menu {
                 display: block;
@@ -526,7 +531,7 @@
             
                         > a:hover,
                         &.active > a {
-                            color: #000;
+                            //color: #000;
 
                             &::after {
                                 opacity: 1;
@@ -542,6 +547,7 @@
                             text-transform: uppercase;
                             letter-spacing: 1px; 
                             position: relative;
+                            color: #fff;
 
                             &::after {
                                 content: '';
@@ -551,7 +557,7 @@
                                 right: 8px;
                                 bottom: -1px;
                                 height: 2px;
-                                background: #000;
+                                background: #fff;
                                 transition: all 0.15s linear;
                             }
                         }

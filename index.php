@@ -8,9 +8,33 @@
 
 	<main>
 		<ul class="banner-main owl-carousel">
-			<li><a href="#"><img src="assets/img/content/banner-1.jpg" alt="Confira nossas ofertas"></a></li>
-			<li><a href="#"><img src="assets/img/content/banner-2.jpg" alt="Roupas infantis"></a></li>
-			<li><a href="#"><img src="assets/img/content/banner-3.jpg" alt="Lançamentos"></a></li>
+			<li>
+				<a href="#">
+					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/banner-1-mobile.jpg 575w,
+							 		<?php echo $urlBase; ?>/assets/img/content/banner-1-desktop.jpg 2000w"
+						sizes="	(max-width: 575px) 100%,
+								(min-width: 576px) 100%"
+					alt="Confira nossas ofertas - Produtos com até 80% de desconto">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/banner-2-mobile.jpg 575w,
+							 		<?php echo $urlBase; ?>/assets/img/content/banner-2-desktop.jpg 2000w"
+						sizes="	(max-width: 575px) 100%,
+								(min-width: 576px) 100%"
+					alt="Linha infantil">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/banner-3-mobile.jpg 575w,
+							 		<?php echo $urlBase; ?>/assets/img/content/banner-3-desktop.jpg 2000w"
+						sizes="	(max-width: 575px) 100%,
+								(min-width: 576px) 100%"
+					alt="Lançamentos 2021">
+				</a>
+			</li>
 		</ul>
 
 		<section class="products">

@@ -1,6 +1,11 @@
 <?php
     $authenticated = false;
-    $urlBase = "http://" . $_SERVER['SERVER_NAME'] . '/e-commerce-portifolio';
+ 
+    if (($_SERVER['HTTP_HOST'] == 'localhost') || ($_SERVER['HTTP_HOST'] == '192.168.2.157')){
+        $urlBase = "http://" . $_SERVER['SERVER_NAME'] . '/e-commerce-portifolio';
+    }else{
+        $urlBase = "https://" . $_SERVER['SERVER_NAME'];
+    }
 ?>
 
 <meta charset="UTF-8">

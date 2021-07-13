@@ -111,9 +111,8 @@
                 <button data-toggle="collapse" class="collapsed" data-target="#header-search" title="Busca">
                     <svg class="svg-search" viewBox="0 0 32 32"><g><path d="M29.71,28.29l-10-10a10,10,0,1,0-1.42,1.42l10,10ZM4,12a8,8,0,1,1,8,8A8,8,0,0,1,4,12Z"/></g></svg>
                 </button>
-                <a href="" class="favorites" title="Meus favoritos">
+                <a href="" class="favorites" title="Lista de desejos (2 itens)">
                     Lista de desejos
-                    <span class="quantity">2</span>
                     <svg class="svg-heart" enable-background="new 0 0 48 48" viewBox="0 0 48 48"><path clip-rule="evenodd" d="M24.804,43.648L24,44l-0.804-0.352C12.862,37.313,2,22.893,2,14.884  C2.035,8.326,7.404,3.002,14,3.002c4.169,0,7.849,2.128,10,5.349c2.151-3.221,5.831-5.349,10-5.349c6.596,0,11.965,5.324,12,11.882  C46,22.893,35.138,37.313,24.804,43.648z M34,4.993c-3.354,0-6.469,1.667-8.335,4.46L24,11.946l-1.665-2.494  C20.469,6.66,17.354,4.993,14,4.993c-5.484,0-9.971,4.442-10,9.891c0,7.064,10.234,20.808,20,26.917  c9.766-6.109,20-19.852,20-26.907C43.971,9.435,39.484,4.993,34,4.993z" fill-rule="evenodd"/></svg>
                 </a>
             </div>

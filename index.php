@@ -47,7 +47,7 @@
 				<form action="">
 					<label for="">Cadastre-se para receber ofertas e descontos exclusivos!</label>
 					<input type="text" placeholder="Digite seu e-mail..." class="input">
-					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-success">Cadastrar</button>
 				</form>
 			</div>
 		</div>

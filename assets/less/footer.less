@@ -3,7 +3,7 @@
 
 #footer {
     background: rgba(0,0,0,0.015);
-    border-top: 1px solid @border-color;
+    border-top: 1px solid @color-border;
     text-align: center;
 
     .bar-top {
@@ -15,7 +15,7 @@
 
             h2 {
                 font-weight: 600;
-                text-transform: uppercase;
+                text-transform: @capitalization;
                 letter-spacing: 0.25px;
                 font-size: inherit;
                 position: relative;
@@ -31,7 +31,7 @@
             .column {
                 padding: @space-vertical 0;
                 margin: 0 -@column-gap;
-                border-bottom: 1px solid @border-color;
+                border-bottom: 1px solid @color-border;
                 
                 .list {
                     padding: 10px 0 4px;
@@ -96,7 +96,7 @@
         .developed {
             font-size: @font-12px;
             margin: 0 -@column-gap;
-            border-top: 1px solid @border-color;
+            border-top: 1px solid @color-border;
             padding: @space-vertical 0;
 
             &:first-line {
@@ -106,7 +106,7 @@
     }
 
     .bar-bottom {
-        border-top: 1px solid @border-color;
+        border-top: 1px solid @color-border;
         padding: @space-vertical 0;
 
         .address, p {
@@ -147,7 +147,7 @@
         }
 
         .bar-top {
-            border-bottom: 1px solid @border-color;
+            border-bottom: 1px solid @color-border;
 
             .site-map {
                 grid-template-columns: repeat(3, 1fr);
@@ -155,7 +155,7 @@
                 font-size: @font-14px;
 
                 h2 {
-                    cursor: default;
+                    cursor: text;
 
                     [class*="fa-"] {
                         display: none;
@@ -224,7 +224,7 @@
         }
 
         .bar-top {
-            border-bottom: 1px solid @border-color;
+            border-bottom: 1px solid @color-border;
 
             .container {
                 max-width: @container-large;

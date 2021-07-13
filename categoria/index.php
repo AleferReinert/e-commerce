@@ -69,23 +69,23 @@
                                 <span class="fa fa-minus icon-show"></span>
                             </legend>
                             <div id="filter-size" class="collapse inline">
-                                <label><input type="checkbox" name="size" value="p">P</label>
-                                <label><input type="checkbox" name="size" value="m">M</label>
-                                <label><input type="checkbox" name="size" value="g">G</label>
-                                <label><input type="checkbox" name="size" value="gg">GG</label>
-                                <label><input type="checkbox" name="size" value="egg">EGG</label>
-                                <label><input type="checkbox" name="size" value="22">22</label>
-                                <label><input type="checkbox" name="size" value="24">24</label>
-                                <label><input type="checkbox" name="size" value="26">26</label>
-                                <label><input type="checkbox" name="size" value="28">28</label>
-                                <label><input type="checkbox" name="size" value="30">30</label>
-                                <label><input type="checkbox" name="size" value="32">32</label>
-                                <label><input type="checkbox" name="size" value="34">34</label>
-                                <label><input type="checkbox" name="size" value="36">36</label>
-                                <label><input type="checkbox" name="size" value="38">38</label>
-                                <label><input type="checkbox" name="size" value="40">40</label>
-                                <label><input type="checkbox" name="size" value="42">42</label>
-                                <label><input type="checkbox" name="size" value="44">44</label>
+                                <label><input type="radio" name="size" value="p">P</label>
+                                <label><input type="radio" name="size" value="m">M</label>
+                                <label><input type="radio" name="size" value="g">G</label>
+                                <label><input type="radio" name="size" value="gg">GG</label>
+                                <label><input type="radio" name="size" value="egg">EGG</label>
+                                <label><input type="radio" name="size" value="22">22</label>
+                                <label><input type="radio" name="size" value="24">24</label>
+                                <label><input type="radio" name="size" value="26">26</label>
+                                <label><input type="radio" name="size" value="28">28</label>
+                                <label><input type="radio" name="size" value="30">30</label>
+                                <label><input type="radio" name="size" value="32">32</label>
+                                <label><input type="radio" name="size" value="34">34</label>
+                                <label><input type="radio" name="size" value="36">36</label>
+                                <label><input type="radio" name="size" value="38">38</label>
+                                <label><input type="radio" name="size" value="40">40</label>
+                                <label><input type="radio" name="size" value="42">42</label>
+                                <label><input type="radio" name="size" value="44">44</label>
                             </div>
                         </fieldset>
                     </div>

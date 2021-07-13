@@ -138,7 +138,7 @@ $(document).ready(function(){
     });
     
     // Função de adicionar aos favoritos caso haja produtos na página
-    if($('.product').length) {
+    if($('.btn-favorites').length) {
         verifyFavorites();
 
         $('.btn-favorites').click(function(e){
@@ -155,9 +155,23 @@ $(document).ready(function(){
     });
 
     // Filtro de produtos - Background color nos inputs checkbox
-    if($('#filters .fieldset-color').length){
-        $('#filters .fieldset-color label').each(function(){
+    if($('.fieldset-color').length){
+        $('.fieldset-color label').each(function(){
             $(this).find('input').css('background', $(this).find('input').attr('value'))
+        });
+    }
+
+    // Filtro de produtos - Mudar cor do label ao ser selecionado (checked)
+    if($('.fieldset-size').length){
+        $('.fieldset-size label').each(function(){
+            
+
+            $(this).click(function(){
+                $('.fieldset-size label').css('color', 'inherit');
+                if($(this).find('input').prop('checked') == true){
+                    $(this).css('color', '#fff');
+                }
+            });
         });
     }
 

@@ -13,4 +13,5 @@
 
 <title>E-Commerce - Portifólio</title>
 
+<link rel="preload" href="<?php echo $urlBase; ?>/assets/css/min/style.min.css" as="style">
 <link rel="stylesheet" href="<?php echo $urlBase; ?>/assets/css/min/style.min.css">

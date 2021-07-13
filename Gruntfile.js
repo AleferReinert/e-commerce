@@ -28,7 +28,8 @@ module.exports = function(grunt) {
 					'assets/js/jquery-3.6.0.js',
 					'assets/js/owl.carousel.min.js',
 					'assets/js/scripts.js',
-					'assets/js/home.js'
+					'assets/js/home.js',
+					'assets/js/product.js'
 				]
 			}
 		}
@@ -42,6 +43,19 @@ module.exports = function(grunt) {
 			destCss: 'assets/less/icons.less'
 		}
     },
+	cwebp: {
+		dynamic: {
+			options: {
+				q: 50
+			},
+			files: [{
+			expand: true,
+			cwd: 'assets/img/content/',
+			src: ['*.{png,jpg,gif}'],
+				dest: 'assets/img/content/min/'
+			}]
+		}
+	},
 	connect: {
 		all: {
 		  options:{
@@ -72,7 +86,8 @@ module.exports = function(grunt) {
 	},
   });
 
-  // Plugis
+  // Plugins
+  grunt.loadNpmTasks('grunt-cwebp');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -80,5 +95,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-connect');
   // Default tasks
-  grunt.registerTask('default', ['sprite','less','cssmin','uglify']);
+  grunt.registerTask('default', ['sprite','less','cssmin','uglify','cwebp']);
 };

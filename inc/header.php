@@ -93,7 +93,7 @@
             <div class="column">
                 <div class="logo">
                     <a href="<?php echo $urlBase; ?>">
-                        <img src="<?php echo $urlBase; ?>/assets/img/content/logo.png" alt="E-Commerce">
+                        <img src="<?php echo $urlBase; ?>/assets/img/content/min/logo.webp" alt="minha lojinha">
                     </a>  
                 </div>
             </div>

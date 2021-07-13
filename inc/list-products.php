@@ -17,8 +17,8 @@
     ?>
     <li>
         <a href="<?php echo $urlBase; ?>/produto" class="product">
-            <img class="image" src="<?php echo $urlBase; ?>/assets/img/content/product-1.jpg" alt="">
-            <h2 class="name">Camiseta Adidas Trefoil</h2>
+            <img class="image" width="330" height="330" src="<?php echo $urlBase; ?>/assets/img/content/min/product-1-img-1.webp" alt="">
+            <h2 class="title">Camiseta Adidas Trefoil</h2>
             
             <?php if($discount == true) { ?>
                 <div class="price-original"><span>R$ 99,90</span></div>

@@ -10,8 +10,8 @@
 		<ul class="banner-main owl-carousel">
 			<li>
 				<a href="#">
-					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/banner-1-mobile.jpg 575w,
-							 		<?php echo $urlBase; ?>/assets/img/content/banner-1-desktop.jpg 2000w"
+					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/min/banner-1-mobile.webp 575w,
+							 		<?php echo $urlBase; ?>/assets/img/content/min/banner-1-desktop.webp 2000w"
 						sizes="	(max-width: 575px) 100%,
 								(min-width: 576px) 100%"
 					alt="Confira nossas ofertas - Produtos com até 80% de desconto">
@@ -19,8 +19,8 @@
 			</li>
 			<li>
 				<a href="#">
-					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/banner-2-mobile.jpg 575w,
-							 		<?php echo $urlBase; ?>/assets/img/content/banner-2-desktop.jpg 2000w"
+					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/min/banner-2-mobile.webp 575w,
+							 		<?php echo $urlBase; ?>/assets/img/content/min/banner-2-desktop.webp 2000w"
 						sizes="	(max-width: 575px) 100%,
 								(min-width: 576px) 100%"
 					alt="Linha infantil">
@@ -28,8 +28,8 @@
 			</li>
 			<li>
 				<a href="#">
-					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/banner-3-mobile.jpg 575w,
-							 		<?php echo $urlBase; ?>/assets/img/content/banner-3-desktop.jpg 2000w"
+					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/min/banner-3-mobile.webp 575w,
+							 		<?php echo $urlBase; ?>/assets/img/content/min/banner-3-desktop.webp 2000w"
 						sizes="	(max-width: 575px) 100%,
 								(min-width: 576px) 100%"
 					alt="Lançamentos 2021">

@@ -25,13 +25,13 @@
                     <div class="carousel-product owl-carousel">
                         <?php for($i=1; $i<=5;$i++): ?>
                             <a href="">
-                                <img src="<?php echo $urlBase; ?>/assets/img/content/product-1-img-<?php echo $i; ?>.jpg" alt="">
+                                <img src="<?php echo $urlBase; ?>/assets/img/content/min/product-1-img-<?php echo $i; ?>.webp" alt="">
                             </a>
                         <?php endfor; ?>
                     </div>
                 </div>
                 <div class="product-image-master">
-                    <img src="<?php echo $urlBase; ?>/assets/img/content/product-1-img-1.jpg" alt="">
+                    <img src="<?php echo $urlBase; ?>/assets/img/content/min/product-1-img-1.webp" alt="">
                 </div>
                 <div class="product-infos">
                     <h1 class="title">Camiseta Adidas Trefoil</h1>

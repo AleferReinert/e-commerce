@@ -32,7 +32,7 @@
                         <a href="">Esqueci minha senha</a>
                         <input type="password" id="form-login-password" class="input" placeholder="Senha">
                     </div>
-                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button type="submit" class="btn btn-success">Entrar</button>
                 </form>
 
                 <a href="" class="link-register">Ainda não é cadastrado? Clique aqui!</a>

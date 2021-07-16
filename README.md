@@ -1,4 +1,4 @@
-# E-Commerce - Portfólio
+# E-Commerce Demonstrativo
 E-commerce desenvolvido para apresentar meu trabalho de front-end. 
 
 Páginas desenvolvidas:
@@ -13,4 +13,4 @@ Páginas desenvolvidas:
 * Perguntas frequentes
 * Política de privacidade
 
-Link: [E-commerce responsivo](https://e-commerce-portfolio.000webhostapp.com/)
+Link: [E-commerce demonstrativo](https://e-commerce-demonstrativo.000webhostapp.com/)

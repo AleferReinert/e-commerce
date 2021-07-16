@@ -11,7 +11,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>E-Commerce - Portifólio</title>
+<title>Minha Lojinha</title>
 
-<link rel="preload" href="<?php echo $urlBase; ?>/assets/css/min/style.min.css" as="style">
 <link rel="stylesheet" href="<?php echo $urlBase; ?>/assets/css/min/style.min.css">

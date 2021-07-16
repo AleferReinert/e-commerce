@@ -1,3 +1,9 @@
+// Variaveis dos breakpoints
+var breakpointSmall         = 576,
+    breakpointMedium        = 768,
+    breakpointLarge         = 992,
+    breakpointExtralarge    = 1200;
+
 // Dropdown
 function dropdown(dropdown, target){
     var dropdown    = typeof(dropdown) == 'undefined' ? $('.dropdown') : $(dropdown);
@@ -176,7 +182,7 @@ $(document).ready(function(){
     }
 
     // Funções apenas para desktop
-    if($(window).width() >= 992){
+    if($(window).width() >= breakpointLarge){
         checkSubmenusQuantity();
     }
 });
@@ -190,7 +196,7 @@ $(window).on('load', function(){
         paddingBody();
         
         // Funções apenas para desktop
-        if($(window).width() >= 992){
+        if($(window).width() >= breakpointLarge){
             collapseCategoryHeader();
         }
     }, 1000);

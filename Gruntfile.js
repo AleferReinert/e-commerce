@@ -94,6 +94,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-connect');
+
   // Default tasks
   grunt.registerTask('default', ['sprite','less','cssmin','uglify','cwebp']);
 };

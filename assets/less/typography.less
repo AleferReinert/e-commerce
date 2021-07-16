@@ -45,3 +45,27 @@ body {
 		}
 	}
 }
+
+// Cabeçalho de seção (detalhes do produto)
+.header-section {
+	margin-bottom: 25px;
+	border-bottom: 2px solid @color-primary; 
+	padding-bottom: 8px;
+
+	.title {
+		font-size: @font-18px;
+		color: @color-secondary;
+		text-transform: @capitalization;
+	}
+}
+
+@media all and (min-width: @breakpoint-extralarge) {
+	.header-section {
+		margin-bottom: @row-gap;
+		padding-bottom: 10px;
+	
+		.title {
+			font-size: @font-20px;
+		}
+	}
+}

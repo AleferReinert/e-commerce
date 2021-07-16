@@ -6,6 +6,7 @@ Páginas desenvolvidas:
 * Home
 * Login
 * Lista de produtos (categorias)
+* Produto (detalhes)
 * Sobre nós
 * Prazos de entrega
 * Trocas e devoluções

@@ -26,11 +26,23 @@ module.exports = function(grunt) {
 			files: {
 				'assets/js/min/scripts.min.js': [
 					'assets/js/jquery-3.6.0.js',
-					'assets/js/scripts.js'
+					'assets/js/owl.carousel.min.js',
+					'assets/js/scripts.js',
+					'assets/js/home.js',
+					'assets/js/product.js'
 				]
 			}
 		}
 	},
+	sprite:{
+		all: {
+			src: 'assets/img/icons/*.png',
+			dest: 'assets/img/sprite.png',
+			cssFormat: 'css',
+			imgPath: '../../img/sprite.png',
+			destCss: 'assets/less/icons.less'
+		}
+    },
 	cwebp: {
 		dynamic: {
 			options: {
@@ -66,12 +78,17 @@ module.exports = function(grunt) {
 		less: {
 			files: ['**/*.less'],
 			tasks: ['less']
+		},
+		spriteIcons: {
+			files: ['assets/img/icons/*.png'],
+			tasks: ['sprite','less',]
 		}
 	},
   });
 
   // Plugins
   grunt.loadNpmTasks('grunt-cwebp');
+  grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -79,5 +96,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default tasks
-  grunt.registerTask('default', ['less','cssmin','uglify','cwebp']);
+  grunt.registerTask('default', ['sprite','less','cssmin','uglify','cwebp']);
 };

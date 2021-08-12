@@ -1,56 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<?php include 'inc/head.php'; ?>
 </head>
-<body id="page-home">
-	<?php include 'inc/header.php'; ?>
+<body id="page-cart">
 
 	<main>
-		<ul class="banner-main owl-carousel">
-			<li>
-				<a href="#">
-					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/min/banner-1-mobile.webp 575w,
-							 		<?php echo $urlBase; ?>/assets/img/content/min/banner-1-desktop.webp 2000w"
-						sizes="	(max-width: 575px) 100%,
-								(min-width: 576px) 100%"
-					alt="Confira nossas ofertas - Produtos com até 80% de desconto">
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/min/banner-2-mobile.webp 575w,
-							 		<?php echo $urlBase; ?>/assets/img/content/min/banner-2-desktop.webp 2000w"
-						sizes="	(max-width: 575px) 100%,
-								(min-width: 576px) 100%"
-					alt="Linha infantil">
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img srcset="	<?php echo $urlBase; ?>/assets/img/content/min/banner-3-mobile.webp 575w,
-							 		<?php echo $urlBase; ?>/assets/img/content/min/banner-3-desktop.webp 2000w"
-						sizes="	(max-width: 575px) 100%,
-								(min-width: 576px) 100%"
-					alt="Lançamentos 2021">
-				</a>
-			</li>
-		</ul>
-
-		<section class="products">
+		<div class="title-page">
 			<div class="container">
-				<?php include 'inc/list-products.php'; ?>
-			</div>
-		</section>
-		<div class="bar-newsletter">
-			<div class="container">
-				<form action="">
-					<label for="">Cadastre-se para receber ofertas e descontos exclusivos!</label>
-					<input type="text" placeholder="Digite seu e-mail..." class="input">
-					<button type="submit" class="btn btn-success">Cadastrar</button>
-				</form>
+				<h1 class="title">Meu carrinho</h1>
 			</div>
 		</div>
+		<form action="" class="form-cart">
+			<div class="container">
+				<ul class="list-products"></ul>
+			</div>
+			<div class="price-total">
+				<div class="container">
+					<p class="text">Total</p>
+					<p class="price"></p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="buttons">
+					<a href="<?php echo $urlBase; ?>/produtos" class="btn btn-default">Continuar comprando</a>
+					<button type="submit" class="btn btn-primary">Finalizar compra</button>
+				</div>
+			</div>
+		</form>
 	</main>
 	
 	<?php include 'inc/footer.php'; ?>

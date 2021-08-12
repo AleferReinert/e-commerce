@@ -8,64 +8,28 @@ body {
 	color: @color-black-default;
 }
 
-.page-title {
-	margin-bottom: (@row-gap / 2);
-
-	.title {
-		font-size: @font-26px;
-		color: @color-secondary;
-	}
-}
-
-.page-only-text {
-
-	main {
-		margin: @row-gap 0;
-		
-		.container {
-			max-width: @container-medium; 
-		}
-
-		h2 {
-			color: @color-black-default;
-			font-size: @font-18px;
-			font-weight: 500;
-			margin-top: 30px;
-		}
-
-		p {
-			font-size: @font-13px;
-			text-indent: 20px;
-			line-height: 20px;
-			text-align: justify;
-
-			+ p {
-				margin-top: 10px;
-			}
-		}
-	}
-}
-
-// Cabeçalho de seção (detalhes do produto)
-.header-section {
-	margin-bottom: 25px;
-	border-bottom: 2px solid @color-primary; 
-	padding-bottom: 8px;
+.title-page {
+	border-bottom: 1px solid @color-border;
+	text-align: center;
 
 	.title {
 		font-size: @font-18px;
-		color: @color-secondary;
-		text-transform: @capitalization;
+		line-height: 20px;
+		padding: 12px 0 8px;
 	}
 }
 
-@media all and (min-width: @breakpoint-extralarge) {
-	.header-section {
-		margin-bottom: @row-gap;
-		padding-bottom: 10px;
-	
+@media all and (min-width: @breakpoint-medium) {
+
+	main {
+		margin: 25px 0;
+	}
+
+	.title-page {
+		text-align: left;
+
 		.title {
-			font-size: @font-20px;
+			font-size: @font-22px;
 		}
 	}
 }

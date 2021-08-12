@@ -1,100 +1,215 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-// Plugins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import 'font-awesome.less';
-@import 'owl.carousel.min.less';
 
 // CSS Components
 @import 'var.less';
 @import 'reset.less';
-@import 'icons.less';
 @import 'typography.less';
-@import 'container.less';
-@import 'forms.less';
-
-// Layout Components
-@import 'header.less';
-@import 'footer.less';
-@import 'breadcrumb.less';
-@import 'list-products.less';
-@import 'bar-newsletter.less';
+@import 'alerts.less';
+@import 'buttons.less';
 @import 'pagination.less';
 
-// Páginas
-@import 'page-home.less';
-@import 'page-login.less';
-@import 'page-category.less'; 
-@import 'page-faq.less'; 
-@import 'page-product.less'; 
-
-// Padding de precaução para não esconder conteudo enquanto o script carrega
-body {
-    padding-top: 100px;
-    @media all and (min-width: @breakpoint-medium) {padding-top: 106px;}
-    @media all and (min-width: @breakpoint-large) {padding-top: 163px;}
+.container {
+    padding: 0 @column-gap;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-// Owl Carousel (defaults)
-.owl-carousel {
+.list-products {
+    padding: @row-gap 0;
+    display: grid;
+    grid-row-gap: @row-gap;
 
-    .owl-dots {
-        text-align: center;
-        font-size: 0;
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        right: 0;
+    li {
+        > a {
+            display: grid;
+            grid-template-columns: 80px auto;
+            grid-column-gap: @column-gap;
+            font-size: 0;
+
+            &:hover {
+
+                img {
+                    border-color: darken(@color-border, 5%);
+                }
+            }
+        }
     }
 
-    button.owl-dot {
-        @size: 12px;
+    .col-image {
+        background: #fff;
 
-        width: @size;
-        height: @size;
-        border-radius: 100%;
-        margin: 0 2px;
-        background: rgba(0,0,0,0.35);
-        transition: all @transition-duration linear;
+        img {
+            aspect-ratio: 1/1;
+            transition: all 0.15s linear;
+        }
+    }
 
-        &:hover {background: rgba(0,0,0,0.5);}
-        &.active {background: @color-primary;}
+    .col-text {
+        padding: 10px 0 0;
+        overflow: hidden;
+    }
+
+    .col-image img {
+        border: 1px solid @color-border;
+    }
+
+    .title {
+        color: @color-black-default;
+        font-size: @font-12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: lowercase;
+        transition: all 0.15s linear;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    .price {
+        color: #a5a5a5;
+        font-size: @font-10px;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+
+    .price-selling {
+        color: @color-black-default;
+        font-size: @font-12px;
+        font-weight: 600;
+        margin-top: -3px;
     }
 }
 
-// Dropdown
-.dropdown-target {
-    display: none; 
-}
-
-// Collapse
-[data-toggle="collapse"] {
-    cursor: pointer;
-
-    &.collapsed {
-        .icon-collapsed {display: block}
-        .icon-show {display: none}
+#page-cart {
+    
+    .price-total {
+        border-top: 1px solid @color-border;
+        border-bottom: 1px solid @color-border;
+        padding: 22px 0;
+    
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .text,
+        .price {
+            font-size: 16px;
+            font-weight: 700;
+        }
     }
 
-    &.show {
-        .icon-collapsed {display: none}
-        .icon-show {display: block}
+    .form-cart {
+        .buttons {
+            padding: 20px 0;
+        }
+    
+        .btn-default {
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            width: 100%;
+        }
     }
 }
 
-// Icons (sprite)
-.icon {
-    display: inline-block;
-}
+@media all and (min-width: @breakpoint-medium) {
 
-// Background (default)
-#background-page {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background: rgba(0,0,0,0.5);
-    display: none;
+    .list-products {
+        grid-row-gap: 0;
+        padding: 0;
+
+        li {
+
+            > a {
+                padding: 15px;
+
+                &:hover {
+                    background: rgba(0,0,0,0.015);
+                }
+            }
+
+            + li {
+                border-top: 1px solid @color-border;
+            }
+        }
+    }
+
+    #page-cart {
+    
+        .price-total {
+            background: rgba(0,0,0,0.025);
+            border: 0;
+
+            .container {
+                justify-content: flex-end;
+            }
+    
+            .price {
+                margin-left: 45px;
+            }
+        }
+        .form-cart {
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .btn {
+                width: auto;
+            }
+
+            .btn-default {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    #page-products {
+
+        .list-products {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: @column-gap;
+            padding: 15px 0;
+
+            li {
+                > a {
+                    display: block;
+                    padding: 15px 0;
+
+                    &:hover {
+                        background: transparent;
+
+                        .col-image img {
+                            border-color: @color-primary;
+                        }
+                    }
+                }
+
+                + li {
+                    border-top: 0;
+                }
+            }
+
+            .title {
+                height: 42px;
+                font-size: @font-14px;
+                white-space: normal;
+            }
+
+            .price {
+                font-size: @font-12px;
+            }
+
+            .price-selling {
+                font-size: @font-14px;
+            }
+        }
+    }
 }

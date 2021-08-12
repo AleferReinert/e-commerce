@@ -1,49 +1,49 @@
 // Pagination
-@size: 40px;
+@radius: 4px;
 
 .pagination {
     text-align: center;
+    margin: 25px 0;
     font-size: 0;
-    margin: 15px 0;
-
+    
     a {
-        display: inline-block;
-        border: 1px solid @color-border;
-        color: rgba(0,0,0,0.5);
         font-size: @font-14px;
-        width: @size;
-        height: @size;
-        line-height: @size;
-        box-sizing: border-box;
+        font-weight: 500;
+        padding: 6px 14px;
+        border: 1px solid @color-border;
         transition: all 0.15s linear;
+        color: #000;
+
+        &:hover {
+            background: rgba(0,0,0,0.025);
+        }
 
         + a {
             border-left: 0;
         }
+    }
 
-        &:first-child {
-            border-top-left-radius: @form-radius;
-            border-bottom-left-radius: @form-radius;
-        }
+    .prev {
+        border-top-left-radius: @radius;
+        border-bottom-left-radius: @radius;
+    }
 
-        &:last-child {
-            border-top-right-radius: @form-radius;
-            border-bottom-right-radius: @form-radius;
-        }
+    .next {
+        border-top-right-radius: @radius;
+        border-bottom-right-radius: @radius;
+    }
+
+    .active {
+        font-weight: 700;
+        background: @color-primary;
+        border-color: @color-primary;
+        color: #fff;
+        border-bottom: 1px solid @color-primary;
+        margin-left: -1px;
 
         &:hover {
-            background: rgba(0,0,0,0.025);
-            color: rgba(0,0,0,0.65);
-        }
-
-        &.current {
-            background: @color-primary;
-            border-color: @color-primary;
-            color: #fff;
-
-            &:hover {
-                background: darken(@color-primary, 2%);
-            }
+            background: darken(@color-primary, 5%);
+            border-color: darken(@color-primary, 5%);
         }
     }
 }

@@ -3,7 +3,7 @@
 <head>
 	<?php include 'inc/head.php'; ?>
 </head>
-<body id="page-home"> andy lives behind cafe
+<body id="page-home">
 	<?php include 'inc/header.php'; ?>
 
 	<main>
